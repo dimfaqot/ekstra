@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+<input type="text" class="username" placeholder="Username">
+<input type="password" class="password" placeholder="Password">
+
+<button class="btn-login">Login</button>
+
+<div class="error"></div>
+
+    <script>
+const user='nuno';
+const pass='bagas';
+
+
+
+        let button=document.querySelector('.btn-login');
+
+        button.addEventListener('click', function(){
+            let input_username=document.querySelector('.username');
+            let username=input_username.value;
+            if(username ==''){
+                console.log('Username harus diisi!.');
+                return false;
+            }
+            if(password ==''){
+                console.log('Password harus diisi!.');
+                return false;
+            }
+
+            let input_password=document.querySelector('.password');
+            let password=input_password.value;
+
+  
+            let error= document.querySelector('.error');
+
+            if(username !==user){
+                let html='<div style="text-align: center;background-color: red;color:white;margin: auto;width: 200px;border-radius: 5px;border: 1px solid black;padding:2px;">Username not found!. <a href="" class="close">X</a></div>'
+                error.innerHTML =html;
+                return false;
+ 
+            }
+            if(password !==pass){
+                let html = '<div style="text-align: center;background-color: red;color:white;margin: auto;width: 200px;border-radius: 5px;border: 1px solid black;padding:2px;">Wrong password!. <a href="" class="close">X</a></div>'
+                error.innerHTML = html;
+                return false;
+ 
+            }
+ 
+            window.location.href='index.html';
+    
+        });
+
+
+        let close=document.querySelector('.close');
+        close.addEventListener('click', function(e){
+         e.preventDefault();
+            let error = document.querySelector('.error');
+             error.innerHTML = '';
+
+        })
+
+
+
+
+
+
+    
+
+ 
+// jumlah looping
+    // let angka=20;
+    // let fizz=3;
+    // let buzz=5;
+
+    // for (let i = 0; i < angka; i++) {
+  
+    //     if(i>0){
+    //         if (i % fizz == 0 && i % buzz == 0) {
+    //             console.log('fizzbuzz= ' + i);
+    //         }else if(i%fizz==0){
+    //             console.log('fizz= '+i);
+    //         }else if(i%buzz==0){
+    //             console.log('buzz= '+i);
+    //         }
+    //     }
+        
+    // }
+    // let a=5;
+    // let b=5;
+    // let jumlah=a+b;
+    // console.log(jumlah);
+
+    //  let c = 5;
+    //     let d = 7;
+    //     let jumlah2 = c + d;
+    //     console.log(jumlah2);
+     
+        // function penjumlahan(a,b){
+        //     let jumlah=a+b;
+
+        //     console.log(jumlah);
+        // }
+
+
+        // penjumlahan(5,5);
+        // penjumlahan(7,4);
+        // penjumlahan(9,3);
+
+    //     function kalkulator(a,b,opr){
+    //        let hasil='';
+
+    //        if(opr=='+'){
+    //         hasil= a + b;
+    //        }
+    //        if(opr=='-'){
+    //         hasil= a - b;
+    //        }
+
+    //        return hasil;
+    //     }
+
+    // kalkulator(5,2,'-');
+
+//   variable, type data, operator aritmatika, penugasan, perbandingan, logika, if, looping,fungsi, ruang lingkup variable
+ 
+
+
+
+    </script>
+
+</body>
+</html>
